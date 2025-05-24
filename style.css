@@ -1,144 +1,124 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    min-height: 0;
+  font-family: JetbrainsMono Nerd Font;
+  font-size: 16px;
+  min-height: 0;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 0px;
 }
 
-window#waybar {
-    background: #000000;
-    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
-    color: #e5e9f0;
+#waybar {
+  background: transparent;
+  color: #c6d0f5;
+  margin: 2px 2px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces {
+  border-radius: 5px;
+  margin: 5px;
+  background: #101010;
+  margin-left: 1rem;
+}
+
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: #ffffff;
-    border-bottom: 3px solid transparent;
+  color: #babbf1;
+  border-radius: 5px;
+  padding: 0.4rem;
 }
 
-#workspaces button.focused {
-    background: #4c566a;
-    border-bottom: 3px solid #e5e9f0;
+#workspaces button.active {
+  color: #99d1db;
+  border-radius: 5px;
 }
 
-#workspaces button.urgent {
-    background-color: #bf616a;
+#workspaces button:hover {
+  color: #85c1dc;
+  border-radius: 5px;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid #ffffff;
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#custom-lock,
+#language,
+#custom-power {
+  background-color: #101010;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
+  border-radius: 5px;
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-media, #tray, #mode, #idle_inhibitor {
-    padding: 0 10px;
-    margin: 0 5px;
+
+#memory {
+  border-radius: 5px;
 }
 
 #clock {
-    /*background-color: #64727D;*/
-    color: #e5e9f0;
-    font-weight: bold;
+  color: #8caaee;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+#language {
+  color: #8caaee;
+  border-radius: 5px;
+  margin-right: 0.1rem;
 }
 
 #battery {
-    /*background-color: #000000;*/
-    color: #e5e9f0;
+  color: #a6d189;
+  border-radius: 5px;
 }
 
 #battery.charging {
-    /*background-color: #000000;*/
-    color: #e5e9f0;
+  color: #a6d189;
 }
 
-@keyframes blink {
-    to {
-        /*background-color: #ffffff;*/
-        color: #000000;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background: #f53c3c;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#cpu {
-    /*background: #2ecc71;*/
-    color: #e5e9f0;
-}
-
-#memory {
-    /*background: #9b59b6;*/
-    color: #e5e9f0;
+#battery.warning:not(.charging) {
+  color: #e78284;
 }
 
 #backlight {
-    /*background: #90b1b1;*/
-    color: #e5e9f0;
+  color: #e5c890;
 }
 
-#network {
-    /*background: #2980b9;*/
-    color: #e5e9f0;
-}
-
-#network.disconnected {
-    /*background: #f53c3c;*/
-    color: #e5e9f0;
+#backlight,
+#battery {
+  border-radius: 0;
+  border-radius: 5px;
 }
 
 #pulseaudio {
-    /*background: #000000;*/
-    color: #e5e9f0;
+  color: #ea999c;
+  border-radius: 5px 0px 0px 5%;
+  margin-left: 1rem;
 }
 
-#pulseaudio.muted {
-    /*background: #000000;*/
-    color: #e5e9f0;
+#custom-music {
+  color: #ca9ee6;
+  border-radius: 5px;
 }
 
-#custom-media {
-    background: #66cc99;
-    color: #2a5c45;
+#custom-lock {
+  border-radius: 5px 0px 0px 5px;
+  color: #babbf1;
 }
 
-.custom-spotify {
-    background: #66cc99;
-}
-
-.custom-vlc {
-    background: #ffa000;
-}
-
-#temperature {
-    background: #f0932b;
-}
-
-#temperature.critical {
-    background: #eb4d4b;
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 5px 5px 0px;
+  color: #e78284;
 }
 
 #tray {
-    /*background-color: #2980b9;*/
-    color: #e5e9f0;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border-radius: 5px;
 }
 
-#idle_inhibitor {
-    background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
-}
