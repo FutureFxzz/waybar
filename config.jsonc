@@ -25,6 +25,10 @@
             "active": ""
         }
     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%d.%m.%y - %H:%M}"
@@ -99,10 +103,5 @@
             ]
         },
         "on-click": "pavucontrol"
-    },
-    "custom/lock": {
-        "tooltip": false,
-        "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-        "format": ""
     }
 }
