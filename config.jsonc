@@ -46,8 +46,8 @@
   },
 
   "clock": {
-    "format": "  {:%H:%M}",
-    "tooltip-format": "{:%A, %d %B %Y}"
+      "format": "󰥔  {:%a %d %b  %H:%M}",
+      "tooltip-format": "<big>{:%H:%M}</big>\n<tt>{:%A, %d %B %Y}</tt>",
   },
 
   "cpu": {
