@@ -1,96 +1,110 @@
+/*base background color*/
+@define-color bg_main rgba(25, 25, 25, 0.65);
+@define-color bg_main_tooltip rgba(0, 0, 0, 0.7);
+
+/*base background color of selections */
+@define-color bg_hover rgba(200, 200, 200, 0.3);
+/*base background color of active elements */
+@define-color bg_active rgba(100, 100, 100, 0.5);
+
+/*base border color*/
+@define-color border_main rgba(255, 255, 255, 0.2);
+
+/*text color for entries, views and content in general */
+@define-color content_main white;
+/*text color for entries that are unselected */
+@define-color content_inactive rgba(255, 255, 255, 0.25);
+
 * {
-  font-family: JetbrainsMono Nerd Font;
-  font-size: 14px;
-  min-height: 0;
-  padding-right: 2px;
-  padding-left: 2px;
-  padding-bottom: 0px;
-  font-weight: bold
+  text-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  font-family: "Ubuntu Mono Nerd Font", "Noto Sans Mono CJK TC";
+  font-weight: 300;
+  font-size: 16px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
-#waybar {
-  background: transparent;
-  color: #c6d0f5;
-  margin: 2px 2px;
+window#waybar {
+  background: @bg_main;
+  border-top: 1px solid @border_main;
+  color: @content_main;
+}
+
+tooltip {
+  background: @bg_main_tooltip;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: @border_main;
+}
+tooltip label {
+  color: @content_main;
 }
 
 #workspaces {
-  border-radius: 5px;
-  margin: 5px;
-  background: #101010;
-  margin-left: 1rem;
+  color: transparent;
+  margin-right: 4px;
+  margin-left: 14px;
 }
-
 #workspaces button {
-  color: #babbf1;
-  border-radius: 5px;
-  padding: 0.4rem;
+  padding: 3px 3px;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 #workspaces button.active {
-  color: #99d1db;
-  border-radius: 5px;
+  color: @content_main;
+}
+#workspaces button.focused {
+  color: @content_main;
+}
+#workspaces button.urgent {
+  background: rgba(255, 87, 51, 0.5);
+  color: @warning_color;
 }
 
-#workspaces button:hover {
-  color: #85c1dc;
-  border-radius: 5px;
-}
-
-#custom-music,
-#tray,
+#custom-media,
+#custom-updates,
 #backlight,
-#clock,
-#battery,
 #pulseaudio,
+#battery,
 #network,
+#custom-weather,
 #cpu,
 #memory,
-#custom-lock,
-#language,
-#custom-power,
-#temperature{
-  background-color: #101010;
-  padding: 0.5rem 1rem;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-
-
+#power-profiles-daemon,
+#custom-swayidle,
 #clock {
-  color: #8caaee;
-  margin-right: 1rem;
-  font-weight: bold
+  margin: 0 10px 0 0;
+  padding: 2px 2px;
 }
 
-#language {
-  color: #8caaee;
-  font-weight: bold
+#power-profiles-daemon {
+  margin: 0 16px 0 0;
+  font-size: 19px;
 }
 
-#battery {
-  color: #a6d189;
+#custom-swayidle {
+  margin: 0px 8px 0 0;
+}
+
+#battery.good {
+  color: #228b22;
+}
+
+#battery.warning {
+  color: #fad104;
+}
+
+#battery.critical {
+  color: #ee2e24;
 }
 
 #battery.charging {
-  color: #a6d189;
+  color: #ffffff;
 }
 
-#battery.warning:not(.charging) {
-  color: #e78284;
+#custom-media {
+  color: #8968cd;
 }
-
-#backlight {
-  color: #e5c890;
-}
-
-
-#pulseaudio {
-  color: #ea999c;
-}
-
-
-
-
-
