@@ -80,7 +80,9 @@
   "network": {
     "format-wifi": "  {signalStrength}%",
     "format-ethernet": "󰈀  ethernet",
-    "format-disconnected": "󰖪  offline"
+    "format-disconnected": "󰖪  offline",
+    "tooltip": true,
+        "tooltip-format": "{ifname} via {gwaddr}"
   },
 
   "battery": {
